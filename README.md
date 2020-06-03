@@ -2,7 +2,7 @@
 
 [My solution](http://emmy-html.github.io/theme-switcher)
 
-![Design preview for the Social media dashboard with theme switcher coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Social media dashboard with theme switcher coding challenge](./img/desktop-preview.jpg)
 
 ## Welcome! 👋
 
