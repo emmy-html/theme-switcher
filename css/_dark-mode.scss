@@ -1,6 +1,6 @@
 .dark-mode {
   background: $dark-blue-bg;
-  color: $desatured-blue;
+  color: $desaturated-blue;
   header {
       h2 {
           color: $white;
@@ -12,7 +12,16 @@
   .platforms-content {
     article {
       background: $dark-desaturated-blue;
-      border-top: 5px solid $facebook;
+      h4 {
+          color: $white;
+          span {
+              color: $desaturated-blue;
+          }
+      }
+    }
+    /* Up/Down */
+    p:nth-of-type(2) {
+        color: $white;
     }
   }
   #stats-overview {
