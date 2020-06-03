@@ -205,12 +205,14 @@ body {
   /* TURN THESE INTO MIXINS TO MAKE CODING THE LIGHT THEME SO MUCH EASIER! */
   /* Social Media Platforms */ 
   .platforms-content {
+      margin-top: 40px;
       article {
           background: $dark-desaturated-blue;
           border-top: 5px solid $facebook;
           border-radius: 5px;
           display: flex;
           align-items: center;
+          justify-content: center;
           flex-direction: column;
           margin-bottom: 20px;
           width: 100%;
@@ -221,6 +223,25 @@ body {
           }
           h3 {
               display: inline-block;
+          }
+      }
+  }
+  #stats-overview {
+      margin-top: 50px;
+      .stats-content {
+          display: flex;
+          flex-direction: column;
+          article {
+              background: $dark-desaturated-blue;
+              border-radius: 5px;
+              margin-bottom: 15px;
+              width: 100%;
+              height: 125px;
+          }
+          aside {
+              display: flex;
+              justify-content: space-between;
+              margin: 10px 25px;
           }
       }
   }
