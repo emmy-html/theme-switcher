@@ -2,22 +2,39 @@
 $dark-blue-bg: hsl(230, 17%, 14%);
 $dark-blue-pattern: hsl(232, 19%, 15%);
 $dark-desaturated-blue: hsl(228, 28%, 20%);
+$dark-gray-blue: hsl(228, 12%, 44%);
 $desaturated-blue: hsl(228, 34%, 66%);
 $hover-blue: hsl(228, 41%, 25%);
 $white: hsl(0, 0%, 100%);
 @mixin hover-states {
-    background: $hover-blue;
-    transition: 1s background;
+  background: $hover-blue;
+  transition: 1s background;
 }
 .dark-mode {
   background: $dark-blue-bg;
   color: $desaturated-blue;
-    h2 {
-      color: $white;
-    }
+  header:before {
+      content: "";
+      border-radius: 0px 0px 15px 15px;
+      background: $dark-blue-pattern;
+      width: 100%;
+      height: 250px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -100;
+  }
+  h2 {
+    color: $white;
+  }
   .toggle-mode {
     border-top: 1px solid $dark-gray-blue;
   }
+  .slider:hover {
+    filter: brightness(1.25);
+    }
   .platforms-content {
     article {
       background: $dark-desaturated-blue;
@@ -36,11 +53,24 @@ $white: hsl(0, 0%, 100%);
     .stats-content {
       article {
         background: $dark-desaturated-blue;
+        &:hover {
+          @include hover-states;
+        }
       }
       h5 {
-          color: white;
+        color: white;
       }
     }
+  }
+  footer {
+      a:link,
+      a:visited {
+          color: $white;
+      }
+      a:hover {
+          color: $twitter;
+          transition: 1s color;
+      }
   }
 }
 

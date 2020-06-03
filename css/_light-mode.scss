@@ -1,3 +1,61 @@
+/* Light Mode Color Scheme */
+$pale-blue: hsl(225, 100%, 98%);
+$light-gray: hsl(227, 47%, 96%);
+$dark-gray-blue: hsl(228, 12%, 44%);
+$hover-gray: hsl(228, 12%, 90%);
+$very-dark-blue: hsl(230, 17%, 14%);
+@mixin hover-states {
+  background: $hover-gray;
+  transition: 1s background;
+}
 .light-mode {
-    background: $white;
+  background: $white;
+  color: $dark-gray-blue;
+  header:before {
+      background: $pale-blue;
+  }
+  h2 {
+    color: $very-dark-blue;
+  }
+  .slider:hover {
+    background: $bg-gradient;
+    filter: none;
+    }
+  .platforms-content {
+    article {
+      background: $light-gray;
+      h4 {
+        color: $very-dark-blue;
+        span {
+          color: $dark-gray-blue;
+        }
+      }
+      &:hover {
+        @include hover-states;
+      }
+    }
+  }
+  #stats-overview {
+    .stats-content {
+      article {
+        background: $light-gray;
+        &:hover {
+          @include hover-states;
+        }
+      }
+      h5 {
+        color: $very-dark-blue;
+      }
+    }
+  }
+  footer {
+      a:link,
+      a:visited {
+          color: $very-dark-blue;
+      }
+      a:hover {
+          color: $twitter;
+          transition: 1s color;
+      }
+  }
 }
