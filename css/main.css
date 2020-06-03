@@ -195,6 +195,38 @@ header {
       justify-content: space-between;
       margin: 10px 25px; }
 
+/* Desktop Styles */
+@media screen and (min-width: 1200px) {
+  .content-wrapper {
+    margin: 0px 160px; }
+
+  /* Header */
+  header .content-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; }
+  header .toggle-mode p {
+    margin-right: 10px; }
+
+  #social-media-platforms .platforms-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between; }
+    #social-media-platforms .platforms-content article {
+      width: 255px; }
+
+  #stats-overview .stats-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+    #stats-overview .stats-content article {
+      width: 255px;
+      margin-bottom: 30px; }
+
+  /* Dark Mode Color Styles - Desktop */
+  .dark-mode .toggle-mode {
+    border: none; } }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
