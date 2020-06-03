@@ -1,11 +1,20 @@
+/* Dark Mode Color Scheme */
+$dark-blue-bg: hsl(230, 17%, 14%);
+$dark-blue-pattern: hsl(232, 19%, 15%);
+$dark-desaturated-blue: hsl(228, 28%, 20%);
+$desaturated-blue: hsl(228, 34%, 66%);
+$hover-blue: hsl(228, 41%, 25%);
+$white: hsl(0, 0%, 100%);
+@mixin hover-states {
+    background: $hover-blue;
+    transition: 1s background;
+}
 .dark-mode {
   background: $dark-blue-bg;
   color: $desaturated-blue;
-  header {
-      h2 {
-          color: $white;
-      }
-  }
+    h2 {
+      color: $white;
+    }
   .toggle-mode {
     border-top: 1px solid $dark-gray-blue;
   }
@@ -13,21 +22,23 @@
     article {
       background: $dark-desaturated-blue;
       h4 {
-          color: $white;
-          span {
-              color: $desaturated-blue;
-          }
-      }
-    }
-    /* Up/Down */
-    p:nth-of-type(2) {
         color: $white;
+        span {
+          color: $desaturated-blue;
+        }
+      }
+      &:hover {
+        @include hover-states;
+      }
     }
   }
   #stats-overview {
     .stats-content {
       article {
         background: $dark-desaturated-blue;
+      }
+      h5 {
+          color: white;
       }
     }
   }
