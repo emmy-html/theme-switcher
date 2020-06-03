@@ -124,27 +124,11 @@ $pale-blue: hsl(225, 100%, 98%);
 $light-gray: hsl(227, 47%, 96%);
 $dark-gray-blue: hsl(228, 12%, 44%);
 $very-dark-blue: hsl(230, 17%, 14%);
-/* Dark Mode Color Styles */
-.dark-mode {
-  background: $dark-blue-bg;
-  color: $desatured-blue;
-  .toggle-mode {
-    border-top: 1px solid $dark-gray-blue;
-  }
-  .platforms-content {
-    article {
-      background: $dark-desaturated-blue;
-      border-top: 5px solid $facebook;
-    }
-  }
-  #stats-overview {
-    .stats-content {
-      article {
-        background: $dark-desaturated-blue;
-      }
-    }
-  }
-}
+/* Color Mode Import */
+@import "dark-mode";
+@import "light-mode";
+/* Keep social media icon colors in main CSS */
+
 /* Mobile Layout Styles */
 body {
   font-family: $main-font;
@@ -217,7 +201,6 @@ header {
     border-radius: 50px;
   }
 }
-/* TURN THESE INTO MIXINS TO MAKE CODING THE LIGHT THEME SO MUCH EASIER! */
 /* Social Media Platforms */
 .platforms-content {
   margin-top: 40px;
@@ -240,6 +223,9 @@ header {
   }
 }
 #stats-overview {
+  h2 {
+    padding-bottom: 35px;
+  }
   margin-top: 50px;
   .stats-content {
     display: flex;
@@ -257,50 +243,46 @@ header {
     }
   }
 }
-/* Desktop Styles */ 
+/* Desktop Styles */
 @media screen and (min-width: 1200px) {
+  .content-wrapper {
+    margin: 0px 160px;
+  }
+  /* Header */
+  header {
     .content-wrapper {
-        margin: 0px 160px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
     }
-    /* Header */ 
-    header {
-        .content-wrapper {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        }
-        .toggle-mode p {
-            margin-right: 10px;
-        }
+    .toggle-mode p {
+      margin-right: 10px;
     }
-    #social-media-platforms {
-        .platforms-content {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            article {
-                width: 255px;
-            }
-        }
+  }
+  #social-media-platforms {
+    .platforms-content {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      article {
+        min-width: 21%;
+        max-width: 22%;
+      }
     }
-    #stats-overview {
-        .stats-content {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-            article {
-                width: 255px;
-                margin-bottom: 30px;
-            }
-        }
+  }
+  #stats-overview {
+    .stats-content {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      article {
+        min-width: 21%;
+        max-width: 22%;
+        margin-bottom: 30px;
+      }
     }
-    /* Dark Mode Color Styles - Desktop */
-    .dark-mode {
-        .toggle-mode {
-            border: none;
-        }
-    }
+  }
 }
 /* ==========================================================================
    Helper classes

@@ -1,0 +1,30 @@
+.dark-mode {
+  background: $dark-blue-bg;
+  color: $desatured-blue;
+  .toggle-mode {
+    border-top: 1px solid $dark-gray-blue;
+  }
+  .platforms-content {
+    article {
+      background: $dark-desaturated-blue;
+      border-top: 5px solid $facebook;
+    }
+  }
+  #stats-overview {
+    .stats-content {
+      article {
+        background: $dark-desaturated-blue;
+      }
+    }
+  }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1200px) {
+  /* Dark Mode Color Styles - Desktop */
+  .dark-mode {
+    .toggle-mode {
+      border: none;
+    }
+  }
+}

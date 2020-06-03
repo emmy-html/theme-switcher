@@ -86,7 +86,7 @@ textarea {
 /* Toggle buttons */
 /* Dark Mode */
 /* Light Mode */
-/* Dark Mode Color Styles */
+/* Color Mode Import */
 .dark-mode {
   background: #1e202a;
   color: #8b97c6; }
@@ -98,6 +98,15 @@ textarea {
   .dark-mode #stats-overview .stats-content article {
     background: #252a41; }
 
+/* Desktop Styles */
+@media screen and (min-width: 1200px) {
+  /* Dark Mode Color Styles - Desktop */
+  .dark-mode .toggle-mode {
+    border: none; } }
+.light-mode {
+  background: white; }
+
+/* Keep social media icon colors in main CSS */
 /* Mobile Layout Styles */
 body {
   font-family: "Inter", sans-serif;
@@ -161,7 +170,6 @@ header {
   header .slider.round:before {
     border-radius: 50px; }
 
-/* TURN THESE INTO MIXINS TO MAKE CODING THE LIGHT THEME SO MUCH EASIER! */
 /* Social Media Platforms */
 .platforms-content {
   margin-top: 40px; }
@@ -182,6 +190,8 @@ header {
 
 #stats-overview {
   margin-top: 50px; }
+  #stats-overview h2 {
+    padding-bottom: 35px; }
   #stats-overview .stats-content {
     display: flex;
     flex-direction: column; }
@@ -214,19 +224,17 @@ header {
     flex-flow: row nowrap;
     justify-content: space-between; }
     #social-media-platforms .platforms-content article {
-      width: 255px; }
+      min-width: 21%;
+      max-width: 22%; }
 
   #stats-overview .stats-content {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; }
     #stats-overview .stats-content article {
-      width: 255px;
-      margin-bottom: 30px; }
-
-  /* Dark Mode Color Styles - Desktop */
-  .dark-mode .toggle-mode {
-    border: none; } }
+      min-width: 21%;
+      max-width: 22%;
+      margin-bottom: 30px; } }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
