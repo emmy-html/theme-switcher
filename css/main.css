@@ -234,6 +234,8 @@ header {
     right: 0;
     bottom: 0;
     position: relative; }
+  .platforms-content .instagram {
+    padding: 10px 0px; }
   .platforms-content .youtube {
     border-top: 5px solid #c4032a; }
   .platforms-content article {
@@ -314,6 +316,9 @@ header {
     #social-media-platforms .platforms-content article {
       min-width: 23%;
       max-width: 23%; }
+    #social-media-platforms .platforms-content .instagram {
+      margin-top: 5px;
+      padding: 0; }
 
   #stats-overview .stats-content {
     display: flex;
