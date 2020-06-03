@@ -1,6 +1,11 @@
 .dark-mode {
   background: $dark-blue-bg;
   color: $desatured-blue;
+  header {
+      h2 {
+          color: $white;
+      }
+  }
   .toggle-mode {
     border-top: 1px solid $dark-gray-blue;
   }

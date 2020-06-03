@@ -90,6 +90,8 @@ textarea {
 .dark-mode {
   background: #1e202a;
   color: #8b97c6; }
+  .dark-mode header h2 {
+    color: white; }
   .dark-mode .toggle-mode {
     border-top: 1px solid #63687e; }
   .dark-mode .platforms-content article {
@@ -106,7 +108,6 @@ textarea {
 .light-mode {
   background: white; }
 
-/* Keep social media icon colors in main CSS */
 /* Mobile Layout Styles */
 body {
   font-family: "Inter", sans-serif;
@@ -115,6 +116,31 @@ body {
 
 .content-wrapper {
   margin: 0px 25px; }
+
+/* Font Awesome Icons */
+i {
+  font-size: 1.25rem; }
+
+i.fa-facebook-square {
+  color: #198ff5; }
+
+i.fa-twitter-square {
+  color: #1ca0f2; }
+
+i.fa-instagram {
+  background: linear-gradient(to top right, #fdc468, #df4996);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+i.fa-youtube-square {
+  color: #c4032a; }
+
+i.fa-sort-up,
+i.fa-sort-down {
+  font-size: .75rem;
+  width: 10px;
+  height: 10px; }
 
 /* Header */
 header {
@@ -169,6 +195,11 @@ header {
     border-radius: 50px; }
   header .slider.round:before {
     border-radius: 50px; }
+  header h2 {
+    line-height: .5rem; }
+  header p {
+    font-weight: 700;
+    line-height: .5rem; }
 
 /* Social Media Platforms */
 .platforms-content {
@@ -180,13 +211,36 @@ header {
     justify-content: center;
     flex-direction: column;
     margin-bottom: 20px;
+    text-align: center;
     width: 100%;
     height: 215px;
-    line-height: 1rem; }
-    .platforms-content article span {
-      display: inline; }
-    .platforms-content article h3 {
-      display: inline-block; }
+    /* Social Media username */
+    /* Number + Stats */
+    /* Up/Down */
+    /* Reset styles */ }
+    .platforms-content article i.fa-facebook-square,
+    .platforms-content article i.fa-twitter-square,
+    .platforms-content article i.fa-instagram,
+    .platforms-content article i.fa-youtube-square {
+      padding-right: 10px; }
+    .platforms-content article p:nth-of-type(1) {
+      font-weight: 700; }
+    .platforms-content article h4 {
+      font-size: 3.5rem;
+      line-height: 2.75rem;
+      margin: 0;
+      padding-top: 25px; }
+      .platforms-content article h4 span {
+        display: block;
+        font-size: .75rem;
+        font-weight: 400;
+        letter-spacing: 0.25rem;
+        margin: 0;
+        text-transform: uppercase; }
+    .platforms-content article p:nth-of-type(2) {
+      font-size: .75rem; }
+    .platforms-content article p {
+      margin: 0; }
 
 #stats-overview {
   margin-top: 50px; }
@@ -219,21 +273,22 @@ header {
   header .toggle-mode p {
     margin-right: 10px; }
 
+  /* Social Media Platforms Section */
   #social-media-platforms .platforms-content {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between; }
     #social-media-platforms .platforms-content article {
-      min-width: 21%;
-      max-width: 22%; }
+      min-width: 23%;
+      max-width: 23%; }
 
   #stats-overview .stats-content {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; }
     #stats-overview .stats-content article {
-      min-width: 21%;
-      max-width: 22%;
+      min-width: 23%;
+      max-width: 23%;
       margin-bottom: 30px; } }
 /* ==========================================================================
    Helper classes
